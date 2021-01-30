@@ -1,9 +1,10 @@
 import {
     SET_USER_PURCHASES,
+    SET_PURCHASE_DETAIL
 } from './types';
 
 export function setPurchaseDetail(_id) {
-    return({
+    return ({
         type: SET_PURCHASE_DETAIL,
         payload: _id
     })
@@ -17,7 +18,7 @@ export function fetchUserPurchases() {
                 _id: 0,
                 total: 8.02,
                 orderNumber: 'A0043999538',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
                     name: 'Diego Calderon',
@@ -28,7 +29,7 @@ export function fetchUserPurchases() {
                 _id: 1,
                 total: 18.02,
                 orderNumber: 'A0043999538',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
                     name: 'Willyrex',
@@ -39,7 +40,7 @@ export function fetchUserPurchases() {
                 _id: 2,
                 total: 6.22,
                 orderNumber: 'A0043999538',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
                     name: 'Maria Amiga',
@@ -50,7 +51,7 @@ export function fetchUserPurchases() {
                 _id: 3,
                 total: 28.43,
                 orderNumber: 'A0043999538',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
                     name: 'Benito Sola',
@@ -61,7 +62,7 @@ export function fetchUserPurchases() {
                 _id: 4,
                 total: 7.69,
                 orderNumber: 'A0043999538',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
                     name: 'Madison Scott x',
@@ -72,7 +73,7 @@ export function fetchUserPurchases() {
                 _id: 5,
                 total: 1.23,
                 orderNumber: 'A0043999538',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
                     name: 'Watson Pattinson',
@@ -83,7 +84,7 @@ export function fetchUserPurchases() {
                 _id: 6,
                 total: 83.71,
                 orderNumber: 'A0043999538',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
                     name: 'Bubu Farmanafagan',
@@ -94,7 +95,7 @@ export function fetchUserPurchases() {
                 _id: 7,
                 total: 8.02,
                 orderNumber: 'A0043999538',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
                     name: 'Roberto Esbelto',
