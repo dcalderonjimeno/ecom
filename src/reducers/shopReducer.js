@@ -38,7 +38,7 @@ export default function (state = INITIAL_STATE, action) {
         case FILTER_PRODUCTS_WITH_QUERY:
             var filteredProducts = [];
             state.products.map(product => {
-                if(product.title.includes(action.payload)) {
+                if(product.title.toLowerCase().includes(action.payload.query)) {
                     return filteredProducts.push(product);
                 }
             })
