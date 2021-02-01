@@ -15,11 +15,16 @@ class Shop extends Component {
         ]
         this.props.setHeaderLinks(headerLinks);
         this.props.fetchShopCategories();
+
+        // filtered products with links
         this.props.fetchShopProducts();
-        // fetch shop products action creator
-        // set the header links
-        // fetch the navbar links 
-            // set the navbar links
+    }
+
+    shouldComponentUpdate(nextProps) {
+        if(this.props != nextProps) {
+            this.props.setNavbarLinks(nextProps.categories, (_id) => this.props.filterProductsWithCategoryId(_id));
+        }
+        return true
     }
 
     render() {
@@ -32,7 +37,10 @@ class Shop extends Component {
 }
 
 function mapStateToProps(state) {
-    return { state }
+    const {categories} = state.shop;
+    return { 
+        categories
+    }
 }
 
 Shop = connect(mapStateToProps, actions)(Shop);
