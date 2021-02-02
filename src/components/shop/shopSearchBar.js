@@ -19,11 +19,11 @@ class ShopSearchBar extends Component {
                 <Field name='query' className='shop-search-bar__form-search-bar' placeholder='Search' component={FormSearchBar}/>
             </form>
         )
-    }
+    }    
 }
 
 ShopSearchBar = reduxForm({
     form: 'ShopSearchBar'
 })(ShopSearchBar);
 
-export default ShopSearchBar
+export default ShopSearchBar;

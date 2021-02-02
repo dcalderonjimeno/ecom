@@ -21,6 +21,10 @@ body {
 @import "form-fields";
 @import "details";
 
+// QUANTITY
+@import "quantity";
+@import "green-price-tag";
+
 // AUTH
 @import "auth/signin";
 @import "auth/signup";
@@ -32,4 +36,4 @@ body {
 
 // SHOP
 @import "shop/shop";
-@import "shop/shop-earch-bar";
+@import "shop/shop-search-bar";

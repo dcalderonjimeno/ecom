@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
+import ShopProduct from './shopProduct';
 import ShopSearchBar from './shopSearchBar';
 
 class Shop extends Component {
@@ -17,7 +18,7 @@ class Shop extends Component {
         this.props.setHeaderLinks(headerLinks);
         this.props.fetchShopCategories();
 
-        // filtered products with links
+        // filter products with links
         this.props.fetchShopProducts();
     }
 
@@ -29,8 +30,7 @@ class Shop extends Component {
     }
 
     onSubmit = (fields) => {
-        console.log(fields)
-        this.props.filterProductsWithQuery(fields);
+        this.props.filterProductsWithQuery(fields)
     }
 
     render() {
@@ -41,14 +41,7 @@ class Shop extends Component {
                     {
                         this.props.filteredProducts.map(product => {
                             return (
-                                <div key={product._id} className='shop-product'>
-                                    <div className='shop-product__description'>
-                                        {product.title}
-                                    </div>
-                                    <div className='shop-product__description'>
-                                    {product.description}
-                                    </div>
-                                </div>
+                                <ShopProduct {...product} key={product._id} />
                             )
                         })
                     }
