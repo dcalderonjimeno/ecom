@@ -69,6 +69,6 @@ function mapStateToProps(state) {
     }
 }
 
-ShopCart = connect(mapStateToProps, actions)(ShopCart)
+ShopCart = connect(mapStateToProps, actions)(ShopCart);
 
 export default ShopCart;
