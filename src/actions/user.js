@@ -30,7 +30,8 @@ export function fetchCartProducts() {
                     title: 'JavaScript in the Browser',
                     description: 'Os recordamos que la solicitud que hicisteis en septiembre solo era válida para el primer semestre. Si queréis continuar en la modalidad remota durante el segundo semestre, tendréis que volver a enviar la solicitud como se indica arriba.',
                     price: 1.99,
-                    belongsTo: [0, 1]
+                    belongsTo: [0, 1],
+                    imageUrl: 'http://via.placeholder.com/80x80'
                 },
                 quantity: 2
             },
@@ -41,7 +42,8 @@ export function fetchCartProducts() {
                     title: 'Graph Database',
                     description: 'Os recordamos que la solicitud que hicisteis en septiembre solo era válida para el primer semestre. Si queréis continuar en la modalidad remota durante el segundo semestre, tendréis que volver a enviar la solicitud como se indica arriba.',
                     price: 1.99,
-                    belongsTo: [0, 6]
+                    belongsTo: [0, 6],
+                    imageUrl: 'http://via.placeholder.com/80x80'
                 },
                 quantity: 1
             },
