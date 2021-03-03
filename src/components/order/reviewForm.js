@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 
 import { reduxForm, Field } from "redux-form";
-import Details from "../details";
 
-import { FormInput, FormButton } from '../formFields';
+import { FormButton } from '../formFields';
 
 import history from '../../history';
 
@@ -12,50 +11,21 @@ class ReviewForm extends Component {
         const { className, handleSubmit } = this.props;
 
         return (
-            <form onSubmit={handleSubmit} className={`${className} sign-up-form`}>
-                <Field className='sign-up-form__name' 
-                type='name' 
-                title='Name' 
-                placeholder='Name' 
-                name='name' 
-                component={FormInput}/>
-
-                <Field className='sign-up-form__email' 
-                type='email' 
-                title='Email' 
-                placeholder='Email' 
-                name='email' 
-                component={FormInput}/>
-
-                <Field className='sign-up-form__password' 
-                type='password' 
-                title='Password' 
-                placeholder='Password' 
-                name='password' 
-                component={FormInput}/>
-
-                <Field className='sign-up-form__confirm' 
-                type='password' 
-                title='Confirm Password' 
-                placeholder='Confirm Password' 
-                name='confirm' 
-                component={FormInput}/>
-
-                <div className="sign-up-form__line"></div>
-                <Field className='sign-up-form__login' 
-                onClick={() => history.push('/account')}
+            <form onSubmit={handleSubmit} className={`${className} review-form`}>
+                <div className="review-form__line"></div>
+                <Field className='review-form__proceed' 
+                onClick={() => history.push('/signin')}
                 type='submit' 
-                title='Create Account' 
-                name='login' 
+                title='Proceed to Checkout' 
+                name='proceed' 
                 component={FormButton}/>
-                <Field className='sign-up-form__back' 
-                onClick={() => history.push('/signip')}
+                <Field className='review-form__back' 
+                onClick={() => history.push('/shop')}
                 type='button' 
                 title='Back' 
                 name='back' 
                 short={true}
                 component={FormButton}/>
-                
             </form>
         )
     }
